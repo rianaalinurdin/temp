@@ -1,0 +1,3105 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sekolahin - Keunggulan dalam Pendidikan</title>
+    <meta
+      name="description"
+      content="Temukan Sekolahin, tempat untuk belajar, bertumbuh, dan berkomunitas."
+    />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              teal: {
+                50: "#F0F9FF", // Sangat terang, hampir putih dengan sedikit nuansa biru (mirip Azure Mist)
+                100: "#E0F2FE", // Biru sangat pucat (mirip Light Cyan)
+                200: "#BAE6FD", // Biru pastel muda (mirip Pale Sky Blue)
+                300: "#7DD3FC", // Biru pastel cerah (mirip Light Sky Blue)
+                400: "#38BDF8", // Biru langit muda yang cerah (mirip Sky-400 di Tailwind)
+                500: "#0EA5E9", // Warna dasar Biru Pastel (Sky-500 di Tailwind - ini cukup cerah untuk "pastel")
+                // Alternatif yang lebih lembut: "#A7D8F0" atau "#ADD8E6" (LightBlue klasik)
+                600: "#0284C7", // Biru yang sedikit lebih gelap dan jenuh (Sky-600)
+                700: "#0369A1", // Biru sedang yang lebih teduh (Sky-700)
+                800: "#075985", // Biru tua yang teduh (Sky-800)
+                900: "#0C4A6E", // Biru sangat gelap, hampir navy lembut (Sky-900)
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom Animations */
+      @keyframes pulse-whatsapp {
+        0%,
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); /* Warna hijau WhatsApp dengan opacity */
+        }
+        50% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+        }
+      }
+
+      .animate-pulse-whatsapp {
+        animation: pulse-whatsapp 2s infinite ease-in-out;
+      }
+
+      @keyframes ping-slow-brosur {
+        0% {
+          transform: scale(0.5);
+          opacity: 0.75;
+        }
+        75%,
+        100% {
+          transform: scale(1.5); /* Sesuaikan skala akhir */
+          opacity: 0;
+        }
+      }
+
+      .animate-ping-slow-brosur {
+        animation: ping-slow-brosur 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+
+      /* Pastikan tombol utama memiliki position relative agar span animasi terikat padanya */
+      #downloadBrochureButton,
+      #whatsappButton {
+        position: relative;
+      }
+
+      /* Animation classes */
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .animate-float-delay-1 {
+        animation: float 6s ease-in-out 1s infinite;
+      }
+      .animate-float-delay-2 {
+        animation: float 6s ease-in-out 2s infinite;
+      }
+      .animate-float-delay-3 {
+        animation: float 6s ease-in-out 3s infinite;
+      }
+      .animate-pulse-slow {
+        animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 175, 185, 0.1),
+          0 10px 10px -5px rgba(0, 175, 185, 0.04);
+      }
+      .hover-glow {
+        transition: box-shadow 0.3s ease;
+      }
+      .hover-glow:hover {
+        box-shadow: 0 0 15px rgba(0, 175, 185, 0.5);
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-b from-sky-50 to-sky-100 relative overflow-x-hidden font-sans"
+  >
+    <!-- Background shapes and patterns -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+      <div
+        class="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-teal-100 opacity-60 animate-float"
+      ></div>
+      <div
+        class="absolute -bottom-40 -left-40 w-[600px] h-[600px] rounded-full bg-teal-100 opacity-60 animate-float-delay-2"
+      ></div>
+      <div
+        class="absolute top-1/3 -right-20 w-80 h-80 rounded-full bg-teal-200 opacity-40 animate-float-delay-1"
+      ></div>
+      <div
+        class="absolute top-40 left-20 w-32 h-32 rounded-full bg-teal-200 opacity-30 animate-float-delay-3"
+      ></div>
+      <div
+        class="absolute bottom-60 right-40 w-24 h-24 rounded-full bg-teal-200 opacity-30 animate-float"
+      ></div>
+      <div class="absolute top-60 left-40 grid grid-cols-5 gap-4">
+        <script>
+          for (let i = 0; i < 25; i++)
+            document.write(
+              '<div class="w-2 h-2 rounded-full bg-teal-300 opacity-20 animate-pulse-slow"></div>'
+            );
+        </script>
+      </div>
+      <div class="absolute bottom-80 right-80 grid grid-cols-5 gap-4">
+        <script>
+          for (let i = 0; i < 25; i++)
+            document.write(
+              '<div class="w-2 h-2 rounded-full bg-teal-300 opacity-20 animate-pulse-slow"></div>'
+            );
+        </script>
+      </div>
+      <div class="absolute top-1/2 left-20 opacity-10">
+        <div class="relative w-40 h-40">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-full h-full text-teal-500"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c1.03.13 2 .45 2.87.93H13v-.93zm0 3h.03c.62-.01 1.25-.01 1.88 0C15.53 7.5 16 8.1 16 9s-.47 1.5-1.09 1.92c-.63.42-1.26.42-1.88.43H13V9.07zm0 3.03H13V15h2V12.1zm1.13 4.02c-.87.48-1.84.8-2.87.93V13h1.74c.9-.01 1.63-.18 2.13-.5.5-.32.75-.75.75-1.26s-.25-.94-.75-1.26c-.5-.32-1.23-.49-2.13-.5H13V7.07h1.13c.92.01 1.76.19 2.28.55.52.35.79.85.79 1.49s-.27 1.14-.79 1.49c-.52.36-1.36.54-2.28.55v.05c.92.01 1.76.19 2.28.55.52.35.79.85.79 1.49s-.27 1.14-.79 1.49c-.52.36-1.36.54-2.28.55z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <section class="bg-sky-50/80 backdrop-blur-md sticky top-0 z-50">
+      <header class="container mx-auto max-w-6xl py-4 px-4 top-0 z-50">
+        <nav class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div class="text-teal-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path
+                  d="M6.5 2H20v15H6.5A2.5 2.5 0 0 1 4 14.5V4A2.5 2.5 0 0 1 6.5 2z"
+                ></path>
+              </svg>
+            </div>
+            <h1 class="text-2xl font-bold text-teal-500">Sekolahin</h1>
+          </div>
+          <div class="hidden md:flex items-center gap-8">
+            <a
+              href="#tentang"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300"
+              >Tentang</a
+            >
+            <a
+              href="#akademik"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300"
+              >Akademik</a
+            >
+            <a
+              href="#pendaftaran"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300"
+              >Pendaftaran</a
+            >
+            <a
+              href="#galeri"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300"
+              >Galeri</a
+            >
+            <a
+              href="#faq"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300"
+              >FAQ</a
+            >
+            <a
+              href="#berita"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300"
+              >Berita</a
+            >
+            <a
+              href="#kontak"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300"
+              >Kontak</a
+            >
+          </div>
+          <button
+            class="bg-teal-500 hover:bg-teal-500 text-white rounded-full px-6 py-2 transition-colors duration-300 hover-lift"
+          >
+            Daftar
+          </button>
+        </nav>
+      </header>
+    </section>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="container mx-auto max-w-6xl mt-8 px-4 relative py-20"
+    >
+      <div
+        class="lg:py-12 xl:py-12 bg-white rounded-3xl overflow-hidden shadow-lg hover-lift"
+      >
+        <div class="flex flex-col md:flex-row">
+          <div class="p-8 md:p-12 md:w-1/2">
+            <div
+              class="text-teal-500 uppercase text-sm font-semibold tracking-wider mb-4"
+            >
+              PENDIDIKAN
+            </div>
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">
+              Keunggulan dalam Belajar
+            </h2>
+            <p class="text-gray-600 mb-8">
+              Selamat datang di Sekolahin, tempat kami menumbuhkan kecintaan
+              belajar dan mempersiapkan siswa untuk masa depan yang cerah.
+              Jelajahi program dan komunitas kami.
+            </p>
+            <button
+              class="bg-teal-500 hover:bg-teal-500 text-white rounded-full px-6 py-2 transition-colors duration-300 hover-lift"
+            >
+              Pelajari Lebih Lanjut
+            </button>
+          </div>
+          <div class="md:w-1/2 relative">
+            <div
+              class="bg-teal-500 h-full rounded-l-[40px] overflow-hidden relative"
+            >
+              <img
+                src="https://img.freepik.com/premium-photo/group-asian-diverse-students-brainstorming-ideas-discussing-school-project-together-class_368093-15814.jpg?ga=GA1.1.324854103.1735460357&semt=ais_hybrid&w=740"
+                alt="Siswa bekerja sama dalam proyek kelompok"
+                class="object-cover h-full w-full"
+              />
+              <div
+                class="absolute top-8 right-8 bg-white p-3 rounded-xl shadow-md hover-glow"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-teal-500"
+                >
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path d="M12 14l0 7"></path>
+                  <path d="M6.34 12.34L5 12l0 0"></path>
+                  <path d="M21 12l-1.34.66"></path>
+                  <path d="M12 21L3 16l9-5 9 5-9 5z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- visi dan misi -->
+    <section class="bg-sky-100/30 backdrop-blur-md">
+      <main
+        class="max-w-6xl mx-auto px-6 py-16 md:py-24 md:px-12 flex flex-col md:flex-row-reverse items-start gap-12"
+      >
+        <section
+          class="flex-1 max-w-md w-full flex flex-col items-start text-center"
+        >
+          <h2 class="text-4xl font-semibold mb-10 w-full">
+            Visi dan Misi Sekolah
+          </h2>
+          <div class="w-full aspect-[3/3] overflow-hidden rounded-xl">
+            <!-- Container dengan rasio 5:7 -->
+            <img
+              alt="Seorang guru sedang mengajar di depan kelas dengan latar belakang papan tulis dan siswa yang memperhatikan"
+              class="w-full h-full object-cover"
+              src="https://images.pexels.com/photos/2982449/pexels-photo-2982449.jpeg?auto=compress&cs=tinysrgb&w=600"
+            />
+          </div>
+        </section>
+        <section class="flex-1 max-w-xl bg">
+          <ul class="space-y-8">
+            <li
+              class="bg-white flex gap-5 p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-full bg-teal-500 flex items-center justify-center text-white text-lg"
+              >
+                <i class="fas fa-eye"></i>
+              </div>
+              <div>
+                <h3
+                  class="font-semibold text-gray-900 mb-2 text-base md:text-lg"
+                >
+                  Apa visi sekolah ini?
+                </h3>
+                <p
+                  class="text-gray-500 text-sm md:text-base max-w-md leading-relaxed"
+                >
+                  Menjadi institusi pendidikan unggulan yang menghasilkan
+                  lulusan berkarakter, berwawasan global, dan berdaya saing
+                  tinggi.
+                </p>
+              </div>
+            </li>
+            <li
+              class="bg-white flex gap-5 p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-full bg-teal-500 flex items-center justify-center text-white text-lg"
+              >
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <div>
+                <h3
+                  class="font-semibold text-gray-900 mb-2 text-base md:text-lg"
+                >
+                  Apa misi utama sekolah ini?
+                </h3>
+                <p
+                  class="text-gray-500 text-sm md:text-base max-w-md leading-relaxed"
+                >
+                  Menyediakan lingkungan belajar yang kondusif, inovatif, dan
+                  inklusif untuk mengembangkan potensi setiap siswa secara
+                  optimal.
+                </p>
+              </div>
+            </li>
+            <li
+              class="bg-white flex gap-5 p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-full bg-teal-500 flex items-center justify-center text-white text-lg"
+              >
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <div>
+                <h3
+                  class="font-semibold text-gray-900 mb-2 text-base md:text-lg"
+                >
+                  Bagaimana sekolah mendukung pengembangan karakter siswa?
+                </h3>
+                <p
+                  class="text-gray-500 text-sm md:text-base max-w-md leading-relaxed"
+                >
+                  Melalui program pembinaan karakter, kegiatan ekstrakurikuler,
+                  dan pembelajaran yang menanamkan nilai-nilai moral dan sosial.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </section>
+    <!-- Features Section -->
+    <section
+      id="tentang"
+      class="container mx-auto max-w-6xl mt-12 px-4 relative py-12"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- School Hours -->
+        <div class="bg-teal-500 text-white p-6 rounded-2xl hover-scale">
+          <div class="flex items-center gap-2 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <h3 class="font-semibold">Jam Sekolah</h3>
+          </div>
+          <div class="mb-4">
+            <div class="text-sm opacity-80">Senin-Jumat</div>
+            <div class="font-semibold">08:30 - 15:30 WIB</div>
+          </div>
+          <div class="mb-4">
+            <div class="text-sm opacity-80">Jam Kantor</div>
+            <div class="font-semibold">08:00 - 16:00 WIB</div>
+          </div>
+          <button
+            class="bg-white text-teal-500 hover:bg-gray-100 rounded-full w-full mt-2 py-2 transition-colors duration-300"
+          >
+            Lihat Kalender
+          </button>
+        </div>
+
+        <!-- Admissions -->
+        <div class="bg-white p-6 rounded-2xl shadow-md hover-lift">
+          <div class="flex items-center gap-2 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6 text-teal-500"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <polyline points="17 11 19 13 23 9"></polyline>
+            </svg>
+            <h3 class="font-semibold">Pendaftaran</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-8">
+            Pelajari proses pendaftaran kami dan cara mendaftar. Kami menyambut
+            siswa baru untuk bergabung dengan komunitas kami yang dinamis.
+          </p>
+          <button
+            class="bg-teal-500 hover:bg-teal-500 text-white rounded-full w-full py-2 transition-colors duration-300"
+          >
+            Daftar Online
+          </button>
+        </div>
+
+        <!-- Our Programs -->
+        <div class="bg-white p-6 rounded-2xl shadow-md hover-lift">
+          <div class="flex items-center gap-2 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6 text-teal-500"
+            >
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+            <h3 class="font-semibold">Program Kami</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-8">
+            Jelajahi beragam program akademik yang dirancang untuk menantang dan
+            menginspirasi siswa di semua tingkatan.
+          </p>
+          <button
+            class="bg-teal-500 hover:bg-teal-500 text-white rounded-full w-full py-2 transition-colors duration-300"
+          >
+            Lihat Program
+          </button>
+        </div>
+
+        <!-- Visit Us -->
+        <div class="bg-white p-6 rounded-2xl shadow-md hover-lift">
+          <div class="flex items-center gap-2 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-6 h-6 text-teal-500"
+            >
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <h3 class="font-semibold">Kunjungi Kami</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-8">
+            Temukan lokasi kampus kami, dapatkan petunjuk arah, dan rencanakan
+            kunjungan Anda. Kami senang menunjukkan sekitar!
+          </p>
+          <button
+            class="bg-teal-500 hover:bg-teal-500 text-white rounded-full w-full py-2 transition-colors duration-300"
+          >
+            Dapatkan Arah
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Programs Section -->
+    <section
+      id="akademik"
+      class="container mx-auto max-w-6xl px-4 relative py-16"
+    >
+      <div class="text-center mb-12">
+        <div
+          class="text-teal-500 uppercase text-sm font-semibold tracking-wider"
+        >
+          PROGRAM
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800">Program Akademik Kami</h2>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Bagian Gambar dengan Aspect Ratio 1:1 -->
+        <div class="md:w-1/2 relative">
+          <div
+            class="relative aspect-square overflow-hidden rounded-3xl shadow-md"
+          >
+            <!-- Gambar dengan object-cover untuk memastikan 1:1 -->
+            <img
+              src="https://img.freepik.com/free-photo/kids-classroom-taking-english-class_23-2149402669.jpg?ga=GA1.1.324854103.1735460357&semt=ais_hybrid&w=740"
+              alt="Siswa belajar teknologi engineering"
+              class="object-cover w-full h-full"
+            />
+
+            <!-- Program bubbles (posisi disesuaikan untuk layout 1:1) -->
+            <div
+              class="absolute top-5 left-5 bg-teal-500 text-white p-3 rounded-full animate-float hover-scale"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-5 h-5"
+              >
+                <path
+                  d="M10.6275 3.56249C11.0025 3.18749 11.25 2.87499 11.25 2.49999C11.25 1.93749 10.8125 1.49999 10.25 1.49999C9.6875 1.49999 9.25 1.93749 9.25 2.49999C9.25 2.87499 9.4975 3.18749 9.8725 3.56249L5.125 8.31249C4.75 8.68749 4.5 8.99999 4.5 9.37499C4.5 9.93749 4.9375 10.375 5.5 10.375C6.0625 10.375 6.5 9.93749 6.5 9.37499C6.5 8.99999 6.2525 8.68749 5.8775 8.31249L10.6275 3.56249Z"
+                />
+                <path
+                  d="M14.75 10.5C14.75 10.05 14.5625 9.625 14.25 9.3125L9.8125 4.875L8.375 6.3125L12.8125 10.75C13.125 11.0625 13.25 11.5 13.25 11.9375V20.5C13.25 21.325 13.925 22 14.75 22C15.575 22 16.25 21.325 16.25 20.5V11.9375C16.25 11.5 16.125 11.0625 15.8125 10.75L14.75 9.75L14.75 10.5Z"
+                />
+                <path
+                  d="M19.5 3C18.3954 3 17.5 3.89543 17.5 5C17.5 6.10457 18.3954 7 19.5 7C20.6046 7 21.5 6.10457 21.5 5C21.5 3.89543 20.6046 3 19.5 3Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="absolute top-1/4 right-5 bg-white shadow-lg p-3 rounded-full border border-gray-100 hover-scale animate-float-delay-2"
+            >
+              <div class="text-teal-500 font-semibold text-sm">Matematika</div>
+            </div>
+            <div
+              class="absolute bottom-1/3 left-5 bg-white shadow-lg p-3 rounded-full border border-gray-100 hover-scale animate-float-delay-1"
+            >
+              <div class="text-teal-500 font-semibold text-sm">Sastra</div>
+            </div>
+            <div
+              class="absolute bottom-10 right-10 bg-white shadow-lg p-3 rounded-full border border-gray-100 hover-scale animate-float-delay-3"
+            >
+              <div class="text-teal-500 font-semibold text-sm">
+                Seni & Musik
+              </div>
+            </div>
+            <div
+              class="absolute bottom-5 left-1/4 bg-white shadow-lg p-3 rounded-full border border-gray-100 hover-scale animate-float"
+            >
+              <div class="text-teal-500 font-semibold text-sm">Olahraga</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bagian Konten -->
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">
+            Fokus pada Sains & Teknologi
+          </h3>
+          <p class="text-gray-600 mb-6">
+            Kurikulum kami menekankan pembelajaran langsung dalam sains dan
+            teknologi, membekali siswa dengan keterampilan berpikir kritis dan
+            pemecahan masalah untuk masa depan. Kami menawarkan laboratorium
+            canggih dan fakultas berpengalaman.
+          </p>
+          <button
+            class="bg-transparent hover:bg-teal-50 text-teal-500 border border-teal-500 rounded-full px-6 py-2 transition-colors duration-300 hover-lift"
+          >
+            Pelajari lebih lanjut
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- What Makes Us Special Section -->
+    <section
+      id="pendaftaran"
+      class="container mx-auto max-w-6xl px-4 relative py-16"
+    >
+      <div class="text-center mb-12">
+        <div
+          class="text-teal-500 uppercase text-sm font-semibold tracking-wider"
+        >
+          MENGAPA MEMILIH KAMI
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800">
+          Apa yang Membuat Kami Istimewa
+        </h2>
+      </div>
+
+      <div
+        class="bg-teal-500 rounded-3xl overflow-hidden p-8 flex flex-col md:flex-row items-center hover-scale"
+      >
+        <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
+          <div class="bg-white p-4 rounded-xl hover-glow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-8 h-8 text-teal-500"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="md:w-1/2 text-white">
+          <h3 class="text-xl font-bold mb-2">
+            Staf Pengajar Berpengalaman & Peduli
+          </h3>
+          <p class="mb-6 opacity-90">
+            Guru-guru kami yang berdedikasi bersemangat tentang pendidikan dan
+            memberikan perhatian pribadi untuk membantu setiap siswa berhasil
+            dan mencapai potensi penuh mereka.
+          </p>
+          <button
+            class="bg-white text-teal-500 hover:bg-gray-100 rounded-full px-6 py-2 transition-colors duration-300 hover-lift"
+          >
+            Kenali Tim Kami
+          </button>
+        </div>
+        <div class="md:w-1/4 mt-6 md:mt-0 flex justify-center">
+          <img
+            src="https://img.freepik.com/free-photo/crop-shot-people-studying_23-2147659168.jpg?ga=GA1.1.324854103.1735460357&semt=ais_hybrid&w=740"
+            alt="Guru mengajar di kelas"
+            class="object-cover rounded-lg animate-float outline outline-5 outline-white outline-offset-4"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Waves Section -->
+    <section
+      id="jadwal-pendaftaran"
+      class="container mx-auto max-w-6xl px-4 relative py-16"
+    >
+      <div class="text-center mb-12">
+        <div
+          class="text-teal-500 uppercase text-sm font-semibold tracking-wider mb-2"
+        >
+          JADWAL PENTING
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          Informasi Jadwal Pendaftaran Siswa Baru
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Jangan lewatkan kesempatan untuk bergabung dengan Sekolahin! Catat
+          tanggal penting pendaftaran kami dan pastikan Anda siap menjadi bagian
+          dari keluarga besar kami.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <!-- Gelombang 1 -->
+        <div
+          class="bg-white rounded-2xl shadow-xl p-6 md:p-8 hover-lift border-t-4 border-teal-500"
+        >
+          <div class="flex items-center mb-5">
+            <div
+              class="bg-teal-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 shadow-md"
+            >
+              1
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-teal-600">
+                Pendaftaran Gelombang 1
+              </h3>
+              <p class="text-sm text-gray-500">
+                Kesempatan awal dengan kuota terbatas!
+              </p>
+            </div>
+          </div>
+
+          <ul class="space-y-4 text-gray-700 mb-6">
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-teal-500 mr-3 mt-1 flex-shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <div>
+                <strong class="font-semibold">Periode Pendaftaran:</strong
+                ><br />
+                15 Januari 2024 - 15 Februari 2024
+              </div>
+            </li>
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-teal-500 mr-3 mt-1 flex-shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <div>
+                <strong class="font-semibold">Tes Seleksi & Observasi:</strong
+                ><br />
+                20 - 22 Februari 2024
+              </div>
+            </li>
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-teal-500 mr-3 mt-1 flex-shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <div>
+                <strong class="font-semibold">Pengumuman Hasil:</strong><br />
+                28 Februari 2024
+              </div>
+            </li>
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-teal-500 mr-3 mt-1 flex-shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.5 2.5 0 00-.567-.267C8.07 8.34 8 8.433 8 8.532v5.074c0 .29.353.417.615.246a2.5 2.5 0 00.433-.205v1.698a2.5 2.5 0 00-.433.205c-.262.17-.615.043-.615-.246V8.532c0-.1.07-.192.433-.382z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 100-12 6 6 0 000 12zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <div>
+                <strong class="font-semibold">Daftar Ulang:</strong><br />
+                1 - 7 Maret 2024
+              </div>
+            </li>
+          </ul>
+          <a
+            href="#pendaftaran"
+            class="inline-block w-full text-center bg-teal-500 hover:bg-teal-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 hover-lift"
+          >
+            Lihat Syarat & Cara Daftar
+          </a>
+        </div>
+
+        <!-- Gelombang 2 -->
+        <div
+          class="bg-white rounded-2xl shadow-xl p-6 md:p-8 hover-lift border-t-4 border-orange-400"
+        >
+          <div class="flex items-center mb-5">
+            <div
+              class="bg-orange-400 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 shadow-md"
+            >
+              2
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-orange-500">
+                Pendaftaran Gelombang 2
+              </h3>
+              <p class="text-sm text-gray-500">
+                Kesempatan kedua (jika kuota masih tersedia).
+              </p>
+            </div>
+          </div>
+
+          <ul class="space-y-4 text-gray-700 mb-6">
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-orange-500 mr-3 mt-1 flex-shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <div>
+                <strong class="font-semibold">Periode Pendaftaran:</strong
+                ><br />
+                1 April 2024 - 30 April 2024
+              </div>
+            </li>
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-orange-500 mr-3 mt-1 flex-shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <div>
+                <strong class="font-semibold">Tes Seleksi & Observasi:</strong
+                ><br />
+                6 - 8 Mei 2024
+              </div>
+            </li>
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-orange-500 mr-3 mt-1 flex-shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <div>
+                <strong class="font-semibold">Pengumuman Hasil:</strong><br />
+                15 Mei 2024
+              </div>
+            </li>
+            <li class="flex items-start">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-orange-500 mr-3 mt-1 flex-shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.5 2.5 0 00-.567-.267C8.07 8.34 8 8.433 8 8.532v5.074c0 .29.353.417.615.246a2.5 2.5 0 00.433-.205v1.698a2.5 2.5 0 00-.433.205c-.262.17-.615.043-.615-.246V8.532c0-.1.07-.192.433-.382z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 100-12 6 6 0 000 12zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <div>
+                <strong class="font-semibold">Daftar Ulang:</strong><br />
+                16 - 22 Mei 2024
+              </div>
+            </li>
+          </ul>
+          <a
+            href="#pendaftaran"
+            class="inline-block w-full text-center bg-orange-400 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 hover-lift"
+          >
+            Cek Syarat & Daftar Sekarang
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-gray-600 mb-4">
+          Punya pertanyaan lebih lanjut mengenai jadwal atau proses pendaftaran?
+        </p>
+        <a
+          href="#kontak"
+          class="bg-transparent hover:bg-teal-50 text-teal-500 border border-teal-500 rounded-full px-8 py-3 transition-colors duration-300 hover-lift text-lg font-medium"
+        >
+          Hubungi Kami
+        </a>
+      </div>
+    </section>
+    <!-- End Registration Waves Section -->
+
+    <!-- Admission Requirements Section -->
+    <section id="syarat-pendaftaran" class="bg-sky-50 py-16 px-4">
+      <div class="container mx-auto max-w-5xl">
+        <div class="text-center mb-12">
+          <div
+            class="text-teal-500 uppercase text-sm font-semibold tracking-wider mb-2"
+          >
+            KELENGKAPAN ADMINISTRASI
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Syarat Pendaftaran Siswa Baru
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Pastikan semua dokumen berikut telah Anda siapkan untuk kelancaran
+            proses pendaftaran putra/putri Anda di Sekolahin.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        >
+          <!-- Syarat Umum -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md hover:border-teal-200 hover:-translate-y-1 group"
+          >
+            <div class="flex items-start gap-4 mb-4">
+              <div
+                class="flex-shrink-0 w-10 h-10 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center group-hover:bg-teal-500 group-hover:text-white transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-lg font-semibold text-gray-700 group-hover:text-teal-600 transition-colors"
+              >
+                Dokumen Umum (Semua Jenjang)
+              </h3>
+            </div>
+            <ul class="space-y-2 text-gray-600 text-sm pl-14">
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-teal-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Formulir Pendaftaran yang telah diisi lengkap</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-teal-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Fotokopi Akta Kelahiran Calon Siswa (2 lembar)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-teal-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Fotokopi Kartu Keluarga (KK) Terbaru (2 lembar)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-teal-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Pas Foto Berwarna Calon Siswa ukuran 3x4 (4 lembar)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-teal-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Fotokopi KTP Orang Tua/Wali (Ayah dan Ibu/Wali)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Syarat Jenjang TK/PAUD -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md hover:border-pink-200 hover:-translate-y-1 group"
+          >
+            <div class="flex items-start gap-4 mb-4">
+              <div
+                class="flex-shrink-0 w-10 h-10 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center group-hover:bg-pink-500 group-hover:text-white transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.539-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-lg font-semibold text-gray-700 group-hover:text-pink-600 transition-colors"
+              >
+                Syarat Tambahan: Jenjang TK/PAUD
+              </h3>
+            </div>
+            <ul class="space-y-2 text-gray-600 text-sm pl-14">
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-pink-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Usia minimal 4 tahun pada bulan Juli 2024 (untuk TK A)</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-pink-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Usia minimal 5 tahun pada bulan Juli 2024 (untuk TK B)</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-pink-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Surat Keterangan Sehat dari Dokter/Puskesmas</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-pink-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Mengikuti observasi kesiapan belajar</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Syarat Jenjang SD -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md hover:border-blue-200 hover:-translate-y-1 group"
+          >
+            <div class="flex items-start gap-4 mb-4">
+              <div
+                class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6.253v11.494m0 0a8.487 8.487 0 01-4.243-.983m4.243.983a8.487 8.487 0 004.243-.983M12 6.253a4.5 4.5 0 00-4.5 4.5c0 2.034 1.16 3.77 2.756 4.518m1.744-8.036A4.486 4.486 0 0112 6.253z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-lg font-semibold text-gray-700 group-hover:text-blue-600 transition-colors"
+              >
+                Syarat Tambahan: Jenjang SD
+              </h3>
+            </div>
+            <ul class="space-y-2 text-gray-600 text-sm pl-14">
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Usia minimal 6 tahun pada bulan Juli 2024</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Fotokopi Ijazah TK/PAUD (jika ada, 2 lembar)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Surat Keterangan Lulus dari TK/PAUD (jika ada)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Mengikuti tes kesiapan masuk SD</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="mt-10 text-center bg-white p-6 rounded-lg border border-teal-100 shadow-sm"
+        >
+          <h4 class="text-lg font-semibold text-teal-700 mb-2">
+            Catatan Penting:
+          </h4>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Semua dokumen harap dimasukkan ke dalam map berwarna (misalnya:
+            <span class="font-semibold text-pink-600">Pink untuk TK</span>,
+            <span class="font-semibold text-blue-600">Biru untuk SD</span>).
+            Kelengkapan dan keaslian dokumen akan diverifikasi oleh tim
+            penerimaan.
+          </p>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a
+            href="#pendaftaran"
+            class="inline-flex items-center bg-teal-500 hover:bg-teal-500 text-white rounded-full px-8 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md text-lg font-semibold"
+          >
+            Daftar Sekarang
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- rincian biaya -->
+
+    <section id="rincian-biaya" class="py-16 px-4 bg-gray-50">
+      <div class="container mx-auto max-w-5xl">
+        <div class="text-center mb-12">
+          <div
+            class="text-teal-500 uppercase text-sm font-semibold tracking-wider mb-2"
+          >
+            INVESTASI PENDIDIKAN
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Rincian Biaya Pendidikan
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Pendidikan berkualitas dengan biaya transparan untuk tahun ajaran
+            2024/2025.
+          </p>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="grid gap-8 mb-12">
+          <!-- Registration Fee -->
+          <div
+            class="bg-white p-6 rounded-xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:border-teal-300 group"
+          >
+            <div class="flex items-center mb-6 gap-4">
+              <div
+                class="bg-teal-100 text-teal-600 p-3 rounded-lg group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors duration-300"
+              >
+                Biaya Pendaftaran & Awal Masuk
+              </h3>
+            </div>
+
+            <!-- Mobile View - Grid Cards -->
+            <div class="md:hidden space-y-3">
+              <div
+                class="border rounded-lg p-4 hover:bg-teal-50/50 transition-colors"
+              >
+                <h4 class="font-semibold text-gray-800 mb-2">
+                  Formulir Pendaftaran
+                </h4>
+                <div class="grid grid-cols-3 gap-2 text-sm">
+                  <div>
+                    <div class="text-gray-500 text-xs">TK/PAUD</div>
+                    <div>Rp 250.000</div>
+                  </div>
+                  <div>
+                    <div class="text-gray-500 text-xs">SD</div>
+                    <div>Rp 300.000</div>
+                  </div>
+                  <div>
+                    <div class="text-gray-500 text-xs">SMP</div>
+                    <div>Rp 350.000</div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="border rounded-lg p-4 bg-gray-50 hover:bg-teal-50/50 transition-colors"
+              >
+                <h4 class="font-semibold text-gray-800 mb-2">Uang Pangkal</h4>
+                <div class="grid grid-cols-3 gap-2 text-sm">
+                  <div>
+                    <div class="text-gray-500 text-xs">TK/PAUD</div>
+                    <div>Rp 3.500.000</div>
+                  </div>
+                  <div>
+                    <div class="text-gray-500 text-xs">SD</div>
+                    <div>Rp 5.000.000</div>
+                  </div>
+                  <div>
+                    <div class="text-gray-500 text-xs">SMP</div>
+                    <div>Rp 7.000.000</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item lainnya dengan pola yang sama -->
+            </div>
+
+            <!-- Desktop View - Table with Scroll -->
+            <div class="hidden md:block overflow-x-auto rounded-lg">
+              <table class="w-full text-gray-700 min-w-[600px]">
+                <thead
+                  class="bg-gradient-to-r from-teal-50 to-teal-100 text-left"
+                >
+                  <tr>
+                    <th class="p-4 font-medium rounded-tl-lg">Jenis Biaya</th>
+                    <th class="p-4 font-medium">TK/PAUD</th>
+                    <th class="p-4 font-medium">SD</th>
+                    <th class="p-4 font-medium rounded-tr-lg">SMP</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr
+                    class="hover:bg-teal-50/50 transition-colors duration-200"
+                  >
+                    <td class="p-4 font-medium">Formulir Pendaftaran</td>
+                    <td class="p-4">Rp 250.000</td>
+                    <td class="p-4">Rp 300.000</td>
+                    <td class="p-4">Rp 350.000</td>
+                  </tr>
+                  <tr
+                    class="bg-gray-50 hover:bg-teal-50/50 transition-colors duration-200"
+                  >
+                    <td class="p-4 font-medium">Uang Pangkal</td>
+                    <td class="p-4">Rp 3.500.000</td>
+                    <td class="p-4">Rp 5.000.000</td>
+                    <td class="p-4">Rp 7.000.000</td>
+                  </tr>
+                  <!-- Baris lainnya -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Monthly Fee -->
+          <div
+            class="bg-white p-6 rounded-xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:border-teal-300 group"
+          >
+            <div class="flex items-center mb-6 gap-4">
+              <div
+                class="bg-teal-100 text-teal-600 p-3 rounded-lg group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors duration-300"
+              >
+                Biaya Pendidikan Bulanan (SPP)
+              </h3>
+            </div>
+
+            <!-- Mobile View - Grid Cards -->
+            <div class="md:hidden space-y-3">
+              <div
+                class="border rounded-lg p-4 hover:bg-teal-50/50 transition-colors"
+              >
+                <h4 class="font-semibold text-gray-800 mb-1">TK / PAUD</h4>
+                <div class="text-teal-600 font-medium mb-1">Rp 450.000</div>
+                <p class="text-sm text-gray-600">
+                  Kegiatan motorik & snack sehat
+                </p>
+              </div>
+
+              <div
+                class="border rounded-lg p-4 bg-gray-50 hover:bg-teal-50/50 transition-colors"
+              >
+                <h4 class="font-semibold text-gray-800 mb-1">SD</h4>
+                <div class="text-teal-600 font-medium mb-1">Rp 650.000</div>
+                <p class="text-sm text-gray-600">Ekstrakurikuler dasar</p>
+              </div>
+
+              <div
+                class="border rounded-lg p-4 hover:bg-teal-50/50 transition-colors"
+              >
+                <h4 class="font-semibold text-gray-800 mb-1">SMP</h4>
+                <div class="text-teal-600 font-medium mb-1">Rp 850.000</div>
+                <p class="text-sm text-gray-600">
+                  Akses laboratorium & perpustakaan digital
+                </p>
+              </div>
+            </div>
+
+            <!-- Desktop View - Table with Scroll -->
+            <div class="hidden md:block overflow-x-auto rounded-lg">
+              <table class="w-full text-gray-700 min-w-[500px]">
+                <thead
+                  class="bg-gradient-to-r from-teal-50 to-teal-100 text-left"
+                >
+                  <tr>
+                    <th class="p-4 font-medium rounded-tl-lg">Jenjang</th>
+                    <th class="p-4 font-medium">SPP / Bulan</th>
+                    <th class="p-4 font-medium rounded-tr-lg">Inklusif</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr
+                    class="hover:bg-teal-50/50 transition-colors duration-200"
+                  >
+                    <td class="p-4 font-medium">TK / PAUD</td>
+                    <td class="p-4 font-semibold text-teal-600">Rp 450.000</td>
+                    <td class="p-4">Kegiatan motorik & snack sehat</td>
+                  </tr>
+                  <tr
+                    class="bg-gray-50 hover:bg-teal-50/50 transition-colors duration-200"
+                  >
+                    <td class="p-4 font-medium">SD</td>
+                    <td class="p-4 font-semibold text-teal-600">Rp 650.000</td>
+                    <td class="p-4">Ekstrakurikuler dasar</td>
+                  </tr>
+                  <tr
+                    class="hover:bg-teal-50/50 transition-colors duration-200"
+                  >
+                    <td class="p-4 font-medium rounded-bl-lg">SMP</td>
+                    <td class="p-4 font-semibold text-teal-600">Rp 850.000</td>
+                    <td class="p-4 rounded-br-lg">
+                      Akses laboratorium & perpustakaan digital
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div
+          class="bg-white p-6 md:p-8 rounded-xl border border-teal-100 hover:shadow-lg transition-shadow duration-300"
+        >
+          <h4
+            class="text-xl font-semibold text-teal-700 mb-4 flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            Informasi Pembayaran
+          </h4>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <ul class="space-y-3 text-gray-700">
+                <li
+                  class="flex items-start gap-2 hover:text-teal-600 transition-colors duration-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Biaya dapat berubah dengan pemberitahuan</span>
+                </li>
+                <!-- Item lainnya -->
+              </ul>
+            </div>
+            <div>
+              <div
+                class="bg-gradient-to-r from-teal-50 to-teal-100 p-4 rounded-lg hover:from-teal-100 hover:to-teal-50 transition-all duration-300"
+              >
+                <p class="font-medium text-teal-700 mb-2">
+                  Rekening Pembayaran:
+                </p>
+                <p
+                  class="text-gray-700 hover:text-teal-600 transition-colors duration-200"
+                >
+                  Bank ABC - 1234567890
+                </p>
+                <p
+                  class="text-gray-700 hover:text-teal-600 transition-colors duration-200"
+                >
+                  a.n. Yayasan Pendidikan Sekolahin
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a
+            href="#kontak"
+            class="inline-flex items-center bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white rounded-full px-8 py-3 transition-all duration-300 hover:shadow-lg text-lg font-medium"
+          >
+            Hubungi Administrasi
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Scholarship Program Section -->
+    <section id="beasiswa" class="py-16 px-4 bg-white">
+      <div class="container mx-auto max-w-6xl">
+        <div class="text-center mb-12 md:mb-16">
+          <div
+            class="text-teal-500 uppercase text-sm font-semibold tracking-wider mb-2"
+          >
+            PELUANG EMAS
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Program Beasiswa Sekolahin
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Kami percaya bahwa setiap siswa berpotensi layak mendapatkan
+            pendidikan terbaik. Sekolahin menyediakan berbagai program beasiswa
+            untuk mendukung siswa berprestasi dan mereka yang membutuhkan.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Beasiswa Prestasi Akademik -->
+          <div
+            class="bg-sky-50 p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col group border border-transparent hover:border-teal-200"
+          >
+            <div class="flex-shrink-0 mb-5">
+              <div
+                class="bg-teal-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-800 mb-3 group-hover:text-teal-600 transition-colors"
+            >
+              Beasiswa Prestasi Akademik
+            </h3>
+            <p class="text-gray-600 text-sm mb-5 flex-grow">
+              Diberikan kepada siswa dengan pencapaian akademik luar biasa,
+              nilai rapor unggul, dan potensi kepemimpinan.
+            </p>
+            <div class="mb-5">
+              <h4 class="font-medium text-gray-700 text-sm mb-2">
+                Kriteria Utama:
+              </h4>
+              <ul class="space-y-1.5 text-sm text-gray-600">
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-2 text-teal-500 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Nilai rata-rata rapor minimal 85.
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-2 text-teal-500 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Aktif dalam kegiatan ekstrakurikuler.
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-2 text-teal-500 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Surat rekomendasi dari sekolah asal.
+                </li>
+              </ul>
+            </div>
+            <a
+              href="#kontak"
+              class="mt-auto inline-block text-center bg-teal-100 text-teal-600 hover:bg-teal-200 font-medium py-2.5 px-5 rounded-lg transition-colors duration-300 text-sm"
+            >
+              Pelajari Lebih Lanjut
+            </a>
+          </div>
+
+          <!-- Beasiswa Bakat & Minat Khusus -->
+          <div
+            class="bg-sky-50 p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col group border border-transparent hover:border-teal-200"
+          >
+            <div class="flex-shrink-0 mb-5">
+              <div
+                class="bg-teal-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.539 1.118l-3.975-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.539-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-800 mb-3 group-hover:text-teal-600 transition-colors"
+            >
+              Beasiswa Bakat & Minat
+            </h3>
+            <p class="text-gray-600 text-sm mb-5 flex-grow">
+              Untuk siswa yang menunjukkan bakat istimewa di bidang non-akademik
+              seperti olahraga, seni, musik, atau kepemimpinan organisasi.
+            </p>
+            <div class="mb-5">
+              <h4 class="font-medium text-gray-700 text-sm mb-2">
+                Kriteria Utama:
+              </h4>
+              <ul class="space-y-1.5 text-sm text-gray-600">
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-2 text-teal-500 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Portofolio atau bukti prestasi di bidang terkait.
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-2 text-teal-500 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Rekomendasi dari pelatih atau pembimbing.
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-2 text-teal-500 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Lulus tes bakat atau audisi (jika ada).
+                </li>
+              </ul>
+            </div>
+            <a
+              href="#kontak"
+              class="mt-auto inline-block text-center bg-teal-100 text-teal-600 hover:bg-teal-200 font-medium py-2.5 px-5 rounded-lg transition-colors duration-300 text-sm"
+            >
+              Pelajari Lebih Lanjut
+            </a>
+          </div>
+
+          <!-- Beasiswa Bantuan Finansial -->
+          <div
+            class="bg-sky-50 p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col group border border-transparent hover:border-teal-200 md:col-span-2 lg:col-span-1"
+          >
+            <div class="flex-shrink-0 mb-5">
+              <div
+                class="bg-teal-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-800 mb-3 group-hover:text-teal-600 transition-colors"
+            >
+              Beasiswa Bantuan Finansial
+            </h3>
+            <p class="text-gray-600 text-sm mb-5 flex-grow">
+              Ditujukan bagi siswa berpotensi yang menghadapi kendala finansial.
+              Seleksi didasarkan pada kebutuhan dan komitmen belajar.
+            </p>
+            <div class="mb-5">
+              <h4 class="font-medium text-gray-700 text-sm mb-2">
+                Kriteria Utama:
+              </h4>
+              <ul class="space-y-1.5 text-sm text-gray-600">
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-2 text-teal-500 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Surat Keterangan Tidak Mampu (SKTM).
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-2 text-teal-500 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Wawancara dengan orang tua/wali.
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-2 text-teal-500 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Motivasi belajar yang tinggi.
+                </li>
+              </ul>
+            </div>
+            <a
+              href="#kontak"
+              class="mt-auto inline-block text-center bg-teal-100 text-teal-600 hover:bg-teal-200 font-medium py-2.5 px-5 rounded-lg transition-colors duration-300 text-sm"
+            >
+              Pelajari Lebih Lanjut
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-12 md:mt-16 text-center">
+          <p class="text-gray-600 mb-6 max-w-lg mx-auto">
+            Proses seleksi beasiswa dilakukan secara transparan dan kompetitif.
+            Untuk informasi detail mengenai syarat, jadwal, dan formulir
+            pendaftaran beasiswa, silakan hubungi tim administrasi kami.
+          </p>
+          <a
+            href="#kontak"
+            class="inline-flex items-center bg-teal-500 hover:bg-teal-500 text-white rounded-full px-8 py-3 transition-all duration-300 hover:shadow-lg text-base font-medium hover:-translate-y-1"
+          >
+            Hubungi Tim Pendaftaran
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 ml-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End Scholarship Program Section -->
+    <!-- Events & Calendar Section -->
+    <section
+      id="berita"
+      class="container mx-auto max-w-6xl px-4 relative py-16"
+    >
+      <div class="text-center mb-4">
+        <div
+          class="text-teal-500 uppercase text-sm font-semibold tracking-wider"
+        >
+          TETAP TERINFORMASI
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Image Section (shown first on mobile) -->
+        <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+          <div class="w-full max-w-[400px] h-auto aspect-square">
+            <img
+              src="https://img.freepik.com/free-photo/calendar-with-pencil-monstera-leaf_23-2148693336.jpg"
+              alt="Kalender acara sekolah"
+              class="w-full h-full object-cover animate-float rounded-3xl shadow-lg"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Text Section (shown second on mobile) -->
+        <div class="w-full md:w-1/2 order-2 md:order-1">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Acara & Kalender Sekolah
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Tetap terinformasi tentang acara sekolah yang akan datang, hari
+            libur, dan tanggal penting. Kalender kami diperbarui secara berkala
+            dengan kegiatan menarik dan jadwal akademik.
+          </p>
+          <button
+            class="bg-teal-500 hover:bg-teal-500 text-white rounded-full px-6 py-2 transition-colors duration-300 hover-lift"
+          >
+            Lihat Kalender Lengkap
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet Our Teachers Section -->
+    <section class="container mx-auto max-w-6xl px-4 py-16">
+      <div class="text-center mb-12">
+        <div
+          class="text-teal-500 uppercase text-sm font-semibold tracking-wider"
+        >
+          TIM KAMI
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800">Kenali Guru Kami</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Teacher 1 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover-lift">
+          <div class="bg-teal-500 rounded-3xl p-4 flex justify-center">
+            <img
+              src="https://img.freepik.com/premium-photo/smart-student-male-writing-interactive-whiteboard-class_368093-12462.jpg?ga=GA1.1.324854103.1735460357&semt=ais_hybrid&w=740"
+              alt="Guru Ava"
+              class="object-cover rounded-3xl"
+            />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Ibu Ava Chen</h3>
+            <p class="text-gray-500 text-sm">Koordinator Matematika</p>
+          </div>
+        </div>
+
+        <!-- Teacher 2 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover-lift">
+          <div class="bg-teal-500 rounded-3xl p-4 flex justify-center">
+            <img
+              src="https://img.freepik.com/free-photo/front-view-man-classroom_23-2150444952.jpg?ga=GA1.1.324854103.1735460357&semt=ais_hybrid&w=740"
+              alt="Guru Ben"
+              class="object-cover rounded-3xl"
+            />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Bapak Ben Carter</h3>
+            <p class="text-gray-500 text-sm">Kepala Departemen Sains</p>
+          </div>
+        </div>
+
+        <!-- Teacher 3 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover-lift">
+          <div class="bg-teal-500 rounded-3xl p-4 flex justify-center">
+            <img
+              src="https://img.freepik.com/premium-photo/front-view-elegant-businesswoman-holding-clipboard-smiling-pointing-left-side-yellow_243918-1512.jpg?ga=GA1.1.324854103.1735460357&semt=ais_hybrid&w=740"
+              alt="Guru Chloe"
+              class="object-cover rounded-3xl"
+            />
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-bold text-lg">Ibu Chloe Davis</h3>
+            <p class="text-gray-500 text-sm">Seni & Sastra</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-8">
+        <button
+          class="bg-transparent hover:bg-teal-50 text-teal-500 border border-teal-500 rounded-full px-6 py-2 transition-colors duration-300 hover-lift"
+        >
+          Lihat Semua Staf
+        </button>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section
+      id="galeri"
+      class="container mx-auto max-w-6xl px-4 relative py-16"
+    >
+      <div class="text-center mb-12">
+        <div
+          class="text-teal-500 uppercase text-sm font-semibold tracking-wider"
+        >
+          GALERI
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800">Galeri Sekolah Kami</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Gallery Item 1 - Kelas -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift transition-transform duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+            alt="Guru mengajar di kelas modern"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-700">Suasana Kelas</h3>
+            <p class="text-sm text-gray-500">Interaksi aktif siswa dan guru.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 - Olahraga -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift transition-transform duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnR8ZW58MHx8MHx8fDA%3D"
+            alt="Siswa bermain basket di lapangan sekolah"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-700">Fasilitas Olahraga</h3>
+            <p class="text-sm text-gray-500">Lapangan multifungsi kami.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 - Perpustakaan -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift transition-transform duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+            alt="Perpustakaan sekolah yang nyaman"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-700">Perpustakaan</h3>
+            <p class="text-sm text-gray-500">Sumber ilmu dan inspirasi.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 - Laboratorium -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift transition-transform duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+            alt="Laboratorium sains dengan peralatan modern"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-700">Laboratorium Sains</h3>
+            <p class="text-sm text-gray-500">Eksplorasi ilmiah siswa.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 - Acara Sekolah -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift transition-transform duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+            alt="Upacara bendera di sekolah"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-700">Acara Sekolah</h3>
+            <p class="text-sm text-gray-500">Momen kebersamaan dan prestasi.</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 6 - Ekstrakurikuler -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-lg hover-lift transition-transform duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+            alt="Kegiatan ekstrakurikuler musik"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-700">Ekstrakurikuler</h3>
+            <p class="text-sm text-gray-500">Mengembangkan bakat dan minat.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-8">
+        <button
+          class="bg-teal-500 hover:bg-teal-500 text-white rounded-full px-6 py-2 transition-colors duration-300 hover-lift"
+        >
+          Lihat Lebih Banyak
+        </button>
+      </div>
+    </section>
+    <!-- Contact Us Section -->
+    <section
+      id="kontak"
+      class="container mx-auto max-w-6xl px-4 py-16 relative"
+    >
+      <div class="text-center mb-12">
+        <div
+          class="text-teal-500 uppercase text-sm font-semibold tracking-wider"
+        >
+          Kontak
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800">Kontak Kami</h2>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl overflow-hidden p-8 md:p-12">
+        <div class="flex flex-col md:flex-row gap-8">
+          <!-- Contact Info -->
+          <div class="md:w-1/3">
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">
+              Alamat Kami
+            </h3>
+            <p class="text-gray-600 mb-2">
+              Jl. Pendidikan No. 123,<br />Kota Ilmu, ID 54321
+            </p>
+            <p class="text-gray-600 mb-2">
+              <strong class="text-gray-700">Telepon:</strong>
+              <a
+                href="tel:+621234567890"
+                class="text-teal-500 hover:text-teal-600"
+                >(021) 123-4567</a
+              >
+            </p>
+            <p class="text-gray-600 mb-6">
+              <strong class="text-gray-700">Email:</strong>
+              <a
+                href="mailto:info@schoolname.ac.id"
+                class="text-teal-500 hover:text-teal-600"
+                >info@schoolname.ac.id</a
+              >
+            </p>
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">Jam Kantor</h3>
+            <p class="text-gray-600">Senin - Jumat: 08:00 - 16:00 WIB</p>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="md:w-2/3">
+            <form action="#" method="POST">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Nama Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+                    placeholder="Budi Sanjaya"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Alamat Email</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+                    placeholder="anda@contoh.com"
+                  />
+                </div>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Subjek</label
+                >
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+                  placeholder="Pertanyaan tentang pendaftaran"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Pesan</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+                  placeholder="Pesan Anda..."
+                ></textarea>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="w-full bg-teal-500 hover:bg-teal-500 text-white font-semibold py-3 px-4 rounded-full transition-colors duration-300 hover-lift"
+                >
+                  Kirim Pesan
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container mx-auto max-w-6xl px-4 relative py-16">
+      <div class="text-center mb-12">
+        <div
+          class="text-teal-500 uppercase text-sm font-semibold tracking-wider"
+        >
+          PERTANYAAN UMUM
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800">Seputar Pendaftaran</h2>
+      </div>
+      <div class="space-y-8 max-w-3xl mx-auto">
+        <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+          <h3 class="font-semibold text-lg text-teal-600 mb-2">
+            Kapan pendaftaran dibuka?
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Pendaftaran untuk tahun ajaran baru biasanya dibuka pada bulan
+            Januari hingga Maret. Informasi detail akan diumumkan di website
+            kami dan media sosial sekolah.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+          <h3 class="font-semibold text-lg text-teal-600 mb-2">
+            Apa saja syarat pendaftarannya?
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Syarat umum meliputi fotokopi akta kelahiran, kartu keluarga, ijazah
+            terakhir (jika ada), dan pas foto. Syarat khusus untuk setiap
+            jenjang akan diinformasikan saat pembukaan pendaftaran.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+          <h3 class="font-semibold text-lg text-teal-600 mb-2">
+            Apakah ada tes masuk?
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Ya, kami mengadakan observasi dan wawancara (disesuaikan dengan
+            jenjang) untuk calon siswa baru guna mengetahui potensi dan kesiapan
+            belajar mereka.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+          <h3 class="font-semibold text-lg text-teal-600 mb-2">
+            Berapa biaya pendaftarannya?
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Informasi mengenai biaya pendaftaran dan biaya pendidikan akan kami
+            sampaikan melalui brosur resmi atau saat Anda menghubungi bagian
+            administrasi kami.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+          <h3 class="font-semibold text-lg text-teal-600 mb-2">
+            Bagaimana cara mendaftar secara online?
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Anda dapat mengunjungi halaman "Pendaftaran" di website kami dan
+            mengikuti instruksi yang tertera. Pastikan untuk menyiapkan semua
+            dokumen yang diperlukan dalam format digital.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky Buttons Container -->
+    <div
+      id="sticky-buttons-container"
+      class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3"
+    >
+      <!-- Tombol Download Brosur -->
+      <a
+        href="path/ke/brosur-sekolahin.pdf"
+        download="Brosur-Sekolahin.pdf"
+        id="downloadBrochureButton"
+        class="relative flex items-center justify-center w-14 h-14 bg-teal-500 text-white rounded-full shadow-lg hover:bg-teal-500 transition-all duration-300 group"
+        aria-label="Download Brosur Sekolahin"
+        title="Download Brosur Sekolahin"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="w-6 h-6"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span
+          class="absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-0 group-hover:opacity-75 animate-ping-slow-brosur"
+        ></span>
+      </a>
+
+      <!-- Tombol Chat WhatsApp -->
+      <a
+        href="https://wa.me/6282315828091?text=Halo%20Admin%20Sekolahin,%20saya%20ingin%20bertanya%20tentang..."
+        target="_blank"
+        rel="noopener noreferrer"
+        id="whatsappButton"
+        class="relative flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 group animate-pulse-whatsapp"
+        aria-label="Chat Admin via WhatsApp"
+        title="Chat Admin via WhatsApp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-7 h-7"
+        >
+          <path
+            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- MODAL SELAMAT DATANG (REVISED) -->
+    <div
+      id="welcomeModal"
+      class="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 pointer-events-none"
+    >
+      <div
+        id="welcomeModalContent"
+        class="bg-white rounded-xl shadow-2xl w-full max-w-3xl transform scale-95 transition-all duration-300 ease-out overflow-hidden flex flex-col md:flex-row"
+      >
+        <!-- Image Section -->
+        <div class="w-full md:w-2/5 h-64 md:h-auto">
+          <img
+            src="https://img.freepik.com/free-photo/university-study-abroad-lifestyle-concept-smiling-cheerful-asian-guy-glasses-standing-with-backpack-laptop-student-his-way-classes-posing-white-background_1258-55845.jpg?ga=GA1.1.324854103.1735460357&semt=ais_hybrid&w=740"
+            alt="Siswa Sekolahin tersenyum"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Text Content Section -->
+        <div
+          class="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-center relative"
+        >
+          <button
+            id="closeWelcomeModal"
+            class="absolute top-4 right-4 text-gray-400 hover:text-teal-600 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-teal-500 p-2 bg-teal-50 rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path
+                  d="M6.5 2H20v15H6.5A2.5 2.5 0 0 1 4 14.5V4A2.5 2.5 0 0 1 6.5 2z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-teal-600">
+              Selamat Datang di Sekolahin!
+            </h2>
+          </div>
+
+          <p class="text-gray-600 text-sm md:text-base mb-5">
+            Tempat terbaik untuk belajar, bertumbuh, dan meraih impian. Kami
+            siap membantu Anda menemukan potensi terbaik.
+          </p>
+
+          <ul class="space-y-3 mb-6 text-sm md:text-base">
+            <li class="flex items-start gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15.28 3.22a.75.75 0 00-1.06 0l-6.75 6.75L4.53 7.03a.75.75 0 00-1.06 1.06l3.5 3.5a.75.75 0 001.06 0l7.25-7.25a.75.75 0 000-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-gray-700"
+                ><strong class="font-semibold">Kurikulum Unggul:</strong>
+                Program belajar yang dirancang untuk masa depan.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15.28 3.22a.75.75 0 00-1.06 0l-6.75 6.75L4.53 7.03a.75.75 0 00-1.06 1.06l3.5 3.5a.75.75 0 001.06 0l7.25-7.25a.75.75 0 000-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-gray-700"
+                ><strong class="font-semibold">Pengajar Profesional:</strong>
+                Guru berpengalaman dan penuh dedikasi.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15.28 3.22a.75.75 0 00-1.06 0l-6.75 6.75L4.53 7.03a.75.75 0 00-1.06 1.06l3.5 3.5a.75.75 0 001.06 0l7.25-7.25a.75.75 0 000-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-gray-700"
+                ><strong class="font-semibold">Lingkungan Inspiratif:</strong>
+                Fasilitas modern dan komunitas suportif.</span
+              >
+            </li>
+          </ul>
+
+          <button
+            id="exploreWelcomeModal"
+            class="w-full bg-teal-500 hover:bg-teal-500 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 hover-lift text-base"
+          >
+            Mulai Jelajahi Sekolahin
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End Welcome Modal -->
+
+    <!-- Footer -->
+    <footer class="bg-sky-100 border-t border-sky-200 mt-12">
+      <div class="container mx-auto max-w-6xl py-8 px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="flex items-center gap-2 mb-4 md:mb-0">
+            <div class="text-teal-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path
+                  d="M6.5 2H20v15H6.5A2.5 2.5 0 0 1 4 14.5V4A2.5 2.5 0 0 1 6.5 2z"
+                ></path>
+              </svg>
+            </div>
+            <h1 class="text-xl font-bold text-teal-500">Sekolahin</h1>
+          </div>
+          <div
+            class="flex flex-wrap justify-center md:justify-start items-center gap-6 mb-4 md:mb-0"
+          >
+            <a
+              href="#tentang"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300 text-sm"
+              >Tentang</a
+            >
+            <a
+              href="#akademik"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300 text-sm"
+              >Akademik</a
+            >
+            <a
+              href="#pendaftaran"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300 text-sm"
+              >Pendaftaran</a
+            >
+            <a
+              href="#galeri"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300 text-sm"
+              >Galeri</a
+            >
+            <a
+              href="#faq"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300 text-sm"
+              >FAQ</a
+            >
+            <a
+              href="#berita"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300 text-sm"
+              >Berita</a
+            >
+            <a
+              href="#kontak"
+              class="text-gray-600 hover:text-teal-500 transition-colors duration-300 text-sm"
+              >Kontak</a
+            >
+          </div>
+          <div class="text-sm text-gray-500">
+            ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Sekolahin. Hak Cipta Dilindungi.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL PENAWARAN TEMPLATE -->
+    <!-- MODAL PENAWARAN TEMPLATE DESAIN -->
+    <div
+      id="promoTemplateModal"
+      class="fixed inset-0 z-[70] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 pointer-events-none"
+    >
+      <div
+        id="promoTemplateModalContent"
+        class="bg-white rounded-xl shadow-2xl w-full max-w-lg transform scale-95 transition-all duration-300 ease-out overflow-hidden flex flex-col"
+      >
+        <!-- Bagian Konten Utama -->
+        <div class="p-6 md:p-8 relative">
+          <button
+            id="closePromoTemplateModal"
+            class="absolute top-4 right-4 text-gray-400 hover:text-red-600 transition-colors"
+            aria-label="Tutup modal"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-teal-500 p-2 bg-teal-50 rounded-full">
+              <!-- Icon bisa diganti, contoh: ikon hadiah atau paket -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-package-check"
+              >
+                <path d="m16.4 9.3-7.8 7.8-2.1-2.1" />
+                <path
+                  d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"
+                />
+                <path d="m7.5 4.27 9 5.15" />
+                <polyline points="3.29 7 12 12 20.71 7" />
+                <line x1="12" y1="22" x2="12" y2="12" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-teal-600">
+              Penawaran Spesial Untuk Anda!
+            </h2>
+          </div>
+
+          <p class="text-gray-600 text-sm md:text-base mb-5">
+            Tingkatkan promosi sekolah Anda dengan paket template desain
+            profesional kami. Mudah disesuaikan dan siap pakai!
+          </p>
+
+          <!-- Placeholder Gambar Template -->
+          <div class="grid grid-cols-3 gap-3 mb-6">
+            <div class="text-center">
+              <img
+                src="https://placehold.co/300x400/e2e8f0/4a5568?text=Brosur%0ASekolah&font=inter"
+                alt="Template Brosur Sekolah"
+                class="w-full h-auto object-cover rounded-md shadow-md aspect-[3/4]"
+              />
+              <p class="text-xs text-gray-500 mt-1">Brosur</p>
+            </div>
+            <div class="text-center">
+              <img
+                src="https://placehold.co/400x200/e2e8f0/4a5568?text=Banner%0AKegiatan&font=inter"
+                alt="Template Banner Kegiatan"
+                class="w-full h-auto object-cover rounded-md shadow-md aspect-[2/1]"
+              />
+              <p class="text-xs text-gray-500 mt-1">Banner</p>
+            </div>
+            <div class="text-center">
+              <img
+                src="https://placehold.co/300x200/e2e8f0/4a5568?text=Landing%0APage&font=inter"
+                alt="Template Landing Page Sekolah"
+                class="w-full h-auto object-cover rounded-md shadow-md aspect-[3/2]"
+              />
+              <p class="text-xs text-gray-500 mt-1">Landing Page</p>
+            </div>
+          </div>
+
+          <ul class="space-y-2 mb-6 text-sm md:text-base">
+            <li class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 text-teal-500 flex-shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-gray-700"
+                >Desain Brosur Sekolah Profesional</span
+              >
+            </li>
+            <li class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 text-teal-500 flex-shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-gray-700"
+                >Template Banner Kegiatan Menarik</span
+              >
+            </li>
+            <li class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 text-teal-500 flex-shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-gray-700"
+                >Layout Landing Page Sekolah Modern</span
+              >
+            </li>
+            <li class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 text-teal-500 flex-shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-gray-700"
+                >Lengkap dengan placeholder gambar</span
+              >
+            </li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button
+              id="viewPromoOfferButton"
+              class="w-full sm:w-auto flex-1 bg-teal-500 hover:bg-teal-500 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 hover-lift text-base"
+            >
+              Lihat Paket Desain
+            </button>
+            <button
+              id="dismissPromoOfferButton"
+              class="w-full sm:w-auto sm:flex-initial bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-base"
+            >
+              Nanti Saja
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Penawaran Template Desain -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              const headerOffset =
+                document.querySelector("header")?.offsetHeight || 0;
+              const elementPosition =
+                targetElement.getBoundingClientRect().top + window.scrollY;
+              const offsetPosition = elementPosition - headerOffset - 20; // 20px for extra padding
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Animate sections on scroll
+        const sections = document.querySelectorAll("section");
+        const animateOnScroll = () => {
+          sections.forEach((section) => {
+            // Skip hero for initial animation, or handle differently if needed
+            if (section.id === "hero" && section.style.opacity === "1") return;
+
+            const elementPosition = section.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            if (elementPosition < screenPosition) {
+              section.style.opacity = "1";
+              section.style.transform = "translateY(0)";
+            }
+          });
+        };
+
+        // Initial state for sections (except hero)
+        sections.forEach((section) => {
+          if (section.id !== "hero") {
+            section.style.opacity = "0";
+            section.style.transform = "translateY(30px)";
+            section.style.transition =
+              "opacity 0.7s ease-out, transform 0.7s ease-out";
+          } else {
+            // Ensure hero is visible immediately
+            section.style.opacity = "1";
+          }
+        });
+
+        window.addEventListener("scroll", animateOnScroll);
+        animateOnScroll(); // Trigger on load
+
+        // Welcome Modal Logic
+        const welcomeModal = document.getElementById("welcomeModal");
+        const welcomeModalContent = document.getElementById(
+          "welcomeModalContent"
+        );
+        const closeWelcomeModalButton =
+          document.getElementById("closeWelcomeModal");
+        const exploreWelcomeModalButton = document.getElementById(
+          "exploreWelcomeModal"
+        );
+
+        const showWelcomeModal = () => {
+          if (sessionStorage.getItem("welcomeModalShown")) {
+            return;
+          }
+          if (welcomeModal && welcomeModalContent) {
+            welcomeModal.classList.remove("pointer-events-none");
+            welcomeModal.classList.add("opacity-100");
+            welcomeModalContent.classList.remove("scale-95");
+            welcomeModalContent.classList.add("scale-100");
+            sessionStorage.setItem("welcomeModalShown", "true");
+          }
+        };
+
+        const hideWelcomeModal = () => {
+          if (welcomeModal && welcomeModalContent) {
+            welcomeModalContent.classList.remove("scale-100");
+            welcomeModalContent.classList.add("scale-95");
+            welcomeModal.classList.remove("opacity-100");
+            setTimeout(() => {
+              welcomeModal.classList.add("pointer-events-none");
+            }, 300); // Match transition duration
+          }
+        };
+
+        setTimeout(showWelcomeModal, 700);
+
+        if (closeWelcomeModalButton) {
+          closeWelcomeModalButton.addEventListener("click", hideWelcomeModal);
+        }
+        if (exploreWelcomeModalButton) {
+          exploreWelcomeModalButton.addEventListener("click", hideWelcomeModal);
+        }
+        if (welcomeModal) {
+          welcomeModal.addEventListener("click", function (event) {
+            if (event.target === welcomeModal) {
+              hideWelcomeModal();
+            }
+          });
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const promoModal = document.getElementById("promoTemplateModal");
+        const promoModalContent = document.getElementById(
+          "promoTemplateModalContent"
+        );
+        const closePromoButton = document.getElementById(
+          "closePromoTemplateModal"
+        );
+        const viewOfferButton = document.getElementById("viewPromoOfferButton");
+        const dismissOfferButton = document.getElementById(
+          "dismissPromoOfferButton"
+        );
+
+        // --- Konfigurasi ---
+        const delayToShowModal = 6000; // Waktu tunda dalam milidetik (5000ms = 5 detik)
+        // Ganti ke 10000 untuk 10 detik
+        const localStorageKey = "promoModalDismissed"; // Kunci untuk localStorage
+
+        // Fungsi untuk membuka modal
+        function openPromoModal() {
+          if (!promoModal || !promoModalContent) return;
+          promoModal.classList.remove("opacity-0", "pointer-events-none");
+          promoModal.classList.add("opacity-100");
+          promoModalContent.classList.remove("scale-95");
+          promoModalContent.classList.add("scale-100");
+          // Simpan status bahwa modal pernah ditampilkan (opsional, agar tidak muncul terus)
+          localStorage.setItem(localStorageKey, "true");
+        }
+
+        // Fungsi untuk menutup modal
+        function closePromoModal() {
+          if (!promoModal || !promoModalContent) return;
+          promoModalContent.classList.remove("scale-100");
+          promoModalContent.classList.add("scale-95");
+          promoModal.classList.remove("opacity-100");
+          promoModal.classList.add("opacity-0", "pointer-events-none");
+          // Simpan status bahwa modal ditutup oleh pengguna
+          localStorage.setItem(localStorageKey, "true");
+        }
+
+        // --- Logika Tampilan Modal ---
+        // Cek apakah modal sudah pernah ditutup oleh pengguna sebelumnya
+        const hasBeenDismissed = localStorage.getItem(localStorageKey);
+
+        if (!hasBeenDismissed) {
+          // Tampilkan modal setelah delay tertentu
+          setTimeout(openPromoModal, delayToShowModal);
+        }
+
+        // --- Event Listeners ---
+        if (closePromoButton) {
+          closePromoButton.addEventListener("click", closePromoModal);
+        }
+
+        if (dismissOfferButton) {
+          dismissOfferButton.addEventListener("click", closePromoModal);
+        }
+
+        if (viewOfferButton) {
+          viewOfferButton.addEventListener("click", () => {
+            // Arahkan ke halaman penawaran atau lakukan aksi lain
+            console.log('Tombol "Lihat Paket Desain" diklik!');
+            // Contoh: window.location.href = '/halaman-paket-desain';
+            closePromoModal(); // Tutup modal setelah diklik
+          });
+        }
+
+        // Tutup modal jika klik di luar konten modal (pada backdrop)
+        if (promoModal) {
+          promoModal.addEventListener("click", (event) => {
+            if (event.target === promoModal) {
+              closePromoModal();
+            }
+          });
+        }
+
+        // Tutup modal dengan tombol Escape
+        document.addEventListener("keydown", (event) => {
+          if (
+            event.key === "Escape" &&
+            promoModal &&
+            promoModal.classList.contains("opacity-100")
+          ) {
+            closePromoModal();
+          }
+        });
+
+        // Untuk testing, hapus item localStorage agar modal muncul lagi saat refresh
+        // Caranya: buka console browser (F12 -> Console) dan ketik:
+        localStorage.removeItem("promoModalDismissed");
+        // Lalu refresh halaman.
+      });
+    </script>
+  </body>
+</html>
